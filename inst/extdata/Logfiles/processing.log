@@ -130,3 +130,82 @@ INFO [2018-09-19 12:15:01] Done
 INFO [2018-09-19 12:15:01] DataPackageR succeeded
 INFO [2018-09-19 12:15:01] Building documentation
 INFO [2018-09-19 12:15:01] Building package
+INFO [2018-09-19 12:25:04] Logging to /Users/chris.knox/nzme/ANZSCO/inst/extdata/Logfiles/processing.log
+INFO [2018-09-19 12:25:04] Processing data
+INFO [2018-09-19 12:25:04] Reading yaml configuration
+INFO [2018-09-19 12:25:04] Found /Users/chris.knox/nzme/ANZSCO/data-raw/tidy_anzsco.Rmd
+INFO [2018-09-19 12:25:04] Processing 1 of 1: /Users/chris.knox/nzme/ANZSCO/data-raw/tidy_anzsco.Rmd
+
+INFO [2018-09-19 12:25:06] 0 required data objects created by tidy_anzsco.Rmd
+INFO [2018-09-19 12:25:06] Processed data sets match existing data sets at version 0.1.0
+INFO [2018-09-19 12:25:06] Saving to data
+INFO [2018-09-19 12:25:06] Copied documentation to /Users/chris.knox/nzme/ANZSCO/R/ANZSCO.R
+INFO [2018-09-19 12:25:06] Done
+INFO [2018-09-19 12:25:06] DataPackageR succeeded
+INFO [2018-09-19 12:25:06] Building documentation
+INFO [2018-09-19 12:25:07] Building package
+INFO [2018-09-19 14:33:26] Logging to /Users/chris.knox/nzme/ANZSCO/inst/extdata/Logfiles/processing.log
+INFO [2018-09-19 14:33:26] Processing data
+INFO [2018-09-19 14:33:26] Reading yaml configuration
+INFO [2018-09-19 14:33:26] Found /Users/chris.knox/nzme/ANZSCO/data-raw/tidy_anzsco.Rmd
+INFO [2018-09-19 14:33:26] Processing 1 of 1: /Users/chris.knox/nzme/ANZSCO/data-raw/tidy_anzsco.Rmd
+
+INFO [2018-09-19 14:33:28] 0 required data objects created by tidy_anzsco.Rmd
+INFO [2018-09-19 14:33:28] Processed data sets match existing data sets at version 0.1.0
+INFO [2018-09-19 14:33:28] Saving to data
+INFO [2018-09-19 14:33:28] Copied documentation to /Users/chris.knox/nzme/ANZSCO/R/ANZSCO.R
+INFO [2018-09-19 14:33:28] Done
+INFO [2018-09-19 14:33:28] DataPackageR succeeded
+INFO [2018-09-19 14:33:28] Building documentation
+INFO [2018-09-19 14:33:29] Building package
+TRACE [2018-09-19 14:36:16] Logging to /Users/chris.knox/nzme/ANZSCO/inst/extdata/Logfiles/processing.log
+TRACE [2018-09-19 14:36:16] Processing data
+TRACE [2018-09-19 14:36:16] Reading yaml configuration
+TRACE [2018-09-19 14:36:16] Found /Users/chris.knox/nzme/ANZSCO/data-raw/tidy_anzsco.Rmd
+TRACE [2018-09-19 14:36:16] Processing 1 of 1: /Users/chris.knox/nzme/ANZSCO/data-raw/tidy_anzsco.Rmd
+
+TRACE [2018-09-19 14:36:18] 0 data set(s) created by tidy_anzsco.Rmd
+TRACE [2018-09-19 14:36:19] Processed data sets match existing data sets at version 0.1.0
+TRACE [2018-09-19 14:36:19] Saving to data
+TRACE [2018-09-19 14:36:19] Copied documentation to /Users/chris.knox/nzme/ANZSCO/R/ANZSCO.R
+TRACE [2018-09-19 14:36:19] Done
+TRACE [2018-09-19 14:36:19] DataPackageR succeeded
+TRACE [2018-09-19 14:36:19] Building documentation
+TRACE [2018-09-19 14:36:19] Building package
+TRACE [2018-09-19 14:43:38] Logging to /Users/chris.knox/nzme/ANZSCO/inst/extdata/Logfiles/processing.log
+TRACE [2018-09-19 14:43:38] Processing data
+TRACE [2018-09-19 14:43:38] Reading yaml configuration
+FATAL [2018-09-19 14:43:38] render_root is not set in yaml
+TRACE [2018-09-19 14:44:28] Logging to /Users/chris.knox/nzme/ANZSCO/inst/extdata/Logfiles/processing.log
+TRACE [2018-09-19 14:44:28] Processing data
+TRACE [2018-09-19 14:44:28] Reading yaml configuration
+TRACE [2018-09-19 14:44:28] Found /Users/chris.knox/nzme/ANZSCO/data-raw/tidy_anzsco.Rmd
+TRACE [2018-09-19 14:44:28] Processing 1 of 1: /Users/chris.knox/nzme/ANZSCO/data-raw/tidy_anzsco.Rmd
+
+TRACE [2018-09-19 14:44:31] 1 data set(s) created by tidy_anzsco.Rmd
+DEBUG [2018-09-19 14:44:31] anzsco added.
+DEBUG [2018-09-19 14:44:31] anzsco added.
+DEBUG [2018-09-19 14:44:31] anzsco added.
+TRACE [2018-09-19 14:44:31] NEWS.md file found, updating!
+TRACE [2018-09-19 14:44:31] NEWS.md file found, updating!
+TRACE [2018-09-19 14:44:31] Data has been updated and DataVersion string incremented automatically to 0.1.1
+TRACE [2018-09-19 14:44:31] Saving to data
+TRACE [2018-09-19 14:44:31] Copied documentation to /Users/chris.knox/nzme/ANZSCO/R/ANZSCO.R
+TRACE [2018-09-19 14:44:31] Done
+TRACE [2018-09-19 14:44:31] DataPackageR succeeded
+TRACE [2018-09-19 14:44:31] Building documentation
+TRACE [2018-09-19 14:44:32] Building package
+TRACE [2018-09-19 14:45:37] Logging to /Users/chris.knox/nzme/ANZSCO/inst/extdata/Logfiles/processing.log
+TRACE [2018-09-19 14:45:37] Processing data
+TRACE [2018-09-19 14:45:37] Reading yaml configuration
+TRACE [2018-09-19 14:45:37] Found /Users/chris.knox/nzme/ANZSCO/data-raw/tidy_anzsco.Rmd
+TRACE [2018-09-19 14:45:37] Processing 1 of 1: /Users/chris.knox/nzme/ANZSCO/data-raw/tidy_anzsco.Rmd
+
+TRACE [2018-09-19 14:45:39] 1 data set(s) created by tidy_anzsco.Rmd
+TRACE [2018-09-19 14:45:39] Processed data sets match existing data sets at version 0.1.1
+TRACE [2018-09-19 14:45:39] Saving to data
+TRACE [2018-09-19 14:45:39] Copied documentation to /Users/chris.knox/nzme/ANZSCO/R/ANZSCO.R
+TRACE [2018-09-19 14:45:39] Done
+TRACE [2018-09-19 14:45:39] DataPackageR succeeded
+TRACE [2018-09-19 14:45:39] Building documentation
+TRACE [2018-09-19 14:45:39] Building package

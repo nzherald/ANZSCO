@@ -1,0 +1,25 @@
+# R data package for tidy ANZSCO definitions
+
+The Australian Bureau of Statistics and Statistics New Zealand use a 
+number of common definitions.
+
+Occupations and their hierarchy are defined by the 
+[Australian and New Zealand Standard Classification of Occupations, 2013, Version 1.2](http://www.abs.gov.au/ANZSCO)
+
+The package was made using [DataPackageR](https://github.com/ropensci/DataPackageR)
+and loosely follows the process described by Greg Finak [here](https://ropensci.org/blog/2018/09/18/datapackager/)
+
+The script `data-raw/tidy_anzsco.Rmd` loads the definitions spreadsheet provided by ABS and StatsNZ and
+converts it into per-occupation long-form.
+
+## Use in R
+
+- Install devtools `install.packages('devtools')`
+- Install ANZSCO from github `devtools::install_github('nzherald/ANZSCO')`
+- Load the ANZSCO package `library(ANZSCO)`
+
+## Use elsewhere
+
+There is a CSV copy of the tidy data `inst/extdata/anzsco.csv`
+
+
