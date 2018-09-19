@@ -18,6 +18,29 @@ converts it into per-occupation long-form.
 - Install ANZSCO from github `devtools::install_github('nzherald/ANZSCO')`
 - Load the ANZSCO package `library(ANZSCO)`
 
+### Why?
+
+Use this when you have occupation data and you want to be able to group
+the higher level categories
+
+```
+library(tidyverse)
+library(ANZSCO)
+
+data <- read_csv(SOME_OCCUPATION_DATA) %>% 
+  left_join(anzsco, by=c(OCCUPATION_COLUMN=Occupation))
+```
+
+This will create a data frame where each row also has all of its ANZSCO definitions.
+
+If you are not working with occupation level data just group the anzsco data accordingly.
+
+```
+minor_groups <- anzsco %>% group_by(Major.Group, Sub.Major.Group, Minor.Group)
+```
+
+The `anzsco` data frame also contains columns with the numeric identifiers for each occupation etc.
+
 ## Use elsewhere
 
 There is a CSV copy of the tidy data `inst/extdata/anzsco.csv`
