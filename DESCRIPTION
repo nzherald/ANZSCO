@@ -1,0 +1,20 @@
+Package: ANZSCO
+Title: Provides a tidy version of ANZSCO occupation definitions
+Version: 1.0
+Authors@R: 
+    person(given = "Chris",
+           family = "Knox",
+           role = c("aut", "cre"),
+           email = "chris.knox@nzherald.co.nz")
+Description: Converts the ANZSCO occupation definitions into a tidy/longform format
+License: CC-BY-4
+Encoding: UTF-8
+LazyData: true
+DataVersion: 0.1.0
+Roxygen: list(markdown = TRUE)
+Date: 2018-09-19
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+RoxygenNote: 6.1.0

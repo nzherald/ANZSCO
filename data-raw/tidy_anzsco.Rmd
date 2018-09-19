@@ -1,0 +1,94 @@
+---
+title: Process Official ANZSCO Definitions.
+author: Chris Knox
+---
+
+
+The official ANZSCO definitions file is available from 
+[http://www.abs.gov.au/ANZSCO](http://www.abs.gov.au/ANZSCO)
+
+The definitions are in a pseudo-hierachical spreadsheet layout.
+
++------------------+----------------------+------------------+-----------------+-----------------+------------+
+| Major Group Code | Major Group          |                  |                 |                 |            |
++------------------+----------------------+------------------+-----------------+-----------------+------------+
+|                  | Sub Major Group Code | Sub Major Group  |                 |                 |            |
++------------------+----------------------+------------------+-----------------+-----------------+------------+
+|                  |                      | Minor Group Code | Minor Group     |                 |            |
++------------------+----------------------+------------------+-----------------+-----------------+------------+
+|                  |                      |                  | Unit Group Code | Unit Group      |            |
++------------------+----------------------+------------------+-----------------+-----------------+------------+
+|                  |                      |                  |                 | Occupation Code | Occupation |
++------------------+----------------------+------------------+-----------------+-----------------+------------+
+
+
+The code below is basically a fold over the rows that collects up all the higher level categories
+and the writes a single row per occupation also defines all the higher level categories for that 
+occupation.
+
+
+```{r}
+library(tidyverse)
+
+raw_data <- readxl::read_excel(project_extdata_path('1220.0 ANZSCO Version 1.2 Structure v3.xls'),
+                               sheet=6,
+                               skip=10,
+                               n_max=1545,
+                               col_names = FALSE
+                               )
+anzsco = tibble(
+  "Major.Group" = character(),
+  "Major.Group.Code" = integer(),
+  "Sub.Major.Group" = character(),
+  "Sub.Major.Group.Code" = integer(),
+  "Minor.Group" = character(),
+  "Minor.Group.Code" = integer(),
+  "Unit.Group" = character(),
+  "Unit.Group.Code" = integer(),
+  "Occupation" = character(),
+  "Occupation.Code" = integer(),
+)
+
+rows = function(x) lapply(seq_len(nrow(x)), function(i) lapply(x,"[",i))
+
+major_group <- character()
+major_group_code <- integer()
+sub_major_group <- character()
+sub_major_group_code <- integer()
+minor_group <- character()
+minor_group_code <- integer()
+unit_group <- character()
+unit_group_code <- integer()
+
+suppressWarnings(for (A in rows(raw_data)) {
+  if (!is.na(A$X__2) && is.na(as.integer(A$X__2))) {
+    major_group <- A$X__2
+    major_group_code <- as.integer(A$X__1)
+  } else if (!is.na(A$X__3) && is.na(as.integer(A$X__3))) {
+    sub_major_group <- A$X__3
+    sub_major_group_code <- as.integer(A$X__2)
+  } else if (!is.na(A$X__4) && is.na(as.integer(A$X__4))) {
+    minor_group <- A$X__4
+    minor_group_code <- as.integer(A$X__3)
+  } else if (!is.na(A$X__5) && is.na(as.integer(A$X__5))) {
+    unit_group <- A$X__5
+    unit_group_code <- as.integer(A$X__4)
+  } else if (!is.na(A$X__6) && is.na(as.integer(A$X__6))) {
+    anzsco <- anzsco %>% add_row(
+      Major.Group = major_group,
+      Major.Group.Code = major_group_code,
+      Sub.Major.Group = sub_major_group,
+      Sub.Major.Group.Code = sub_major_group_code,
+      Minor.Group = minor_group,
+      Minor.Group.Code = minor_group_code,
+      Unit.Group = unit_group,
+      Unit.Group.Code = unit_group_code,
+      Occupation = A$X__6,
+      Occupation.Code = as.integer(A$X__5)
+    )
+  }
+})
+
+write_csv(anzsco, project_extdata_path("anzsco.csv"))
+
+```
