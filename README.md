@@ -46,3 +46,13 @@ The `anzsco` data frame also contains columns with the numeric identifiers for e
 There is a CSV copy of the tidy data `inst/extdata/anzsco.csv`
 
 
+# License
+
+The code is released under and MIT licence and the data is available under a creative commons attribution license.
+
+The data was originally licensed as 
+
+- [© Commonwealth of Australia 2013](http://www.abs.gov.au/websitedbs/d3310114.nsf/Home/%C2%A9+Copyright?OpenDocument)
+- [© Crown Copyright New Zealand 2013](https://www.stats.govt.nz/about-us/copyright/?url=/about_us/about-this-site/copyright-terms-of-use.aspx)
+
+
